@@ -1,0 +1,43 @@
+command,delay(ms),status
+GRANT SELECT ON countries TO 'other_user'@'localhost',2000,unreachable
+REVOKE SELECT ON countries FROM 'other_user'@'localhost',1046.9233989715576,reachable
+GRANT SELECT ON countries TO 'other_user'@'localhost',2000,unreachable
+REVOKE SELECT ON countries FROM 'other_user'@'localhost',1044.898509979248,reachable
+"INSERT INTO countries (name, population) VALUES ('Testland', 123456)",2018.3966159820557,unreachable
+UPDATE countries SET population = 654321 WHERE name = 'Testland',1046.2455749511719,reachable
+DELETE FROM countries WHERE name = 'Testland',2016.1716938018799,unreachable
+"
+            INSERT INTO countries (name, population) VALUES ('Testland', 123456)
+            ON DUPLICATE KEY UPDATE population = VALUES(population)
+            ",1064.2995834350586,reachable
+SELECT * FROM countries,2016.474962234497,unreachable
+SHOW DATABASES,1054.3529987335205,reachable
+SHOW TABLES,2016.0930156707764,unreachable
+SHOW COLUMNS FROM countries,1053.8384914398193,reachable
+SHOW INDEX FROM countries,2015.892744064331,unreachable
+SHOW TABLE STATUS LIKE 'countries',1057.5969219207764,reachable
+SHOW PROCESSLIST,2013.8697624206543,unreachable
+SHOW GRANTS FOR 'username'@'localhost',1057.992696762085,reachable
+SHOW CREATE TABLE countries,2010.0715160369873,unreachable
+SHOW VARIABLES,1063.3642673492432,reachable
+SHOW STATUS,2017.0044898986816,unreachable
+SHOW ERRORS,1044.572114944458,reachable
+SHOW WARNINGS,2008.2745552062988,unreachable
+START TRANSACTION,1071.5932846069336,reachable
+SAVEPOINT svpt1,2019.6475982666016,unreachable
+"INSERT INTO countries (name, population) VALUES ('TempCountry', 100)",1051.584005355835,reachable
+UPDATE countries SET population = 200 WHERE name = 'TempCountry',2023.2806205749512,unreachable
+ROLLBACK TO svpt1,1048.0310916900635,reachable
+COMMIT,2008.5899829864502,unreachable
+USE sqli,1052.9990196228027,reachable
+SET @test_variable = 'test_value',2011.721134185791,unreachable
+SELECT @test_variable,1058.588981628418,reachable
+EXPLAIN SELECT * FROM countries,2015.6223773956299,unreachable
+LOCK TABLES countries READ,1045.8860397338867,reachable
+UNLOCK TABLES,2016.4101123809814,unreachable
+Accuracy,0.5151515151515151
+Precision,0.0
+Recall,0.0
+F1 Score,0.0
+True Positive Rate (TPR),0.0
+False Positive Rate (FPR),1.0

@@ -1,0 +1,82 @@
+command,delay(ms),status
+GRANT SELECT ON countries TO 'other_user'@'localhost',2000,unreachable
+REVOKE SELECT ON countries FROM 'other_user'@'localhost',1106.0371398925781,reachable
+CREATE DATABASE IF NOT EXISTS temp_db,2000,unreachable
+USE temp_db,1053.5998344421387,reachable
+"
+        CREATE TABLE IF NOT EXISTS temp_table (
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            data VARCHAR(100)
+        )
+        ",2000,unreachable
+CREATE INDEX idx_data ON temp_table(data),1051.177978515625,reachable
+"
+        CREATE VIEW view_data AS
+        SELECT data FROM temp_table
+        ",2000,unreachable
+"
+        CREATE PROCEDURE SelectAll()
+        BEGIN
+            SELECT * FROM temp_table;
+        END
+        ",1077.8372287750244,reachable
+"
+        CREATE FUNCTION GetDataCount() RETURNS INT
+        BEGIN
+            DECLARE cnt INT;
+            SELECT COUNT(*) INTO cnt FROM temp_table;
+            RETURN cnt;
+        END
+        ",2000,unreachable
+"
+        CREATE TRIGGER BeforeInsert
+        BEFORE INSERT ON temp_table FOR EACH ROW
+        SET NEW.data = CONCAT('Prefix_', NEW.data)
+        ",1048.2466220855713,reachable
+ALTER TABLE temp_table ADD COLUMN new_column VARCHAR(100),2000,unreachable
+ALTER TABLE temp_table DROP COLUMN new_column,1064.4993782043457,reachable
+DROP INDEX idx_data ON temp_table,2000,unreachable
+DROP TRIGGER BeforeInsert,1070.359230041504,reachable
+DROP FUNCTION GetDataCount,2000,unreachable
+DROP PROCEDURE SelectAll,1057.0056438446045,reachable
+DROP VIEW view_data,2000,unreachable
+DROP TABLE temp_table,1047.5196838378906,reachable
+DROP DATABASE temp_db,2000,unreachable
+"INSERT INTO countries (name, population) VALUES ('Testland', 123456)",1062.0946884155273,reachable
+UPDATE countries SET population = 654321 WHERE name = 'Testland',2020.0514793395996,unreachable
+DELETE FROM countries WHERE name = 'Testland',1052.0308017730713,reachable
+"
+            INSERT INTO countries (name, population) VALUES ('Testland', 123456)
+            ON DUPLICATE KEY UPDATE population = VALUES(population)
+            ",2016.3753032684326,unreachable
+SELECT * FROM countries,1052.8223514556885,reachable
+SHOW DATABASES,2015.679121017456,unreachable
+SHOW TABLES,1044.9645519256592,reachable
+SHOW COLUMNS FROM countries,2014.4176483154297,unreachable
+SHOW INDEX FROM countries,1055.0177097320557,reachable
+SHOW TABLE STATUS LIKE 'countries',2010.767936706543,unreachable
+SHOW PROCESSLIST,1066.4551258087158,reachable
+SHOW GRANTS FOR 'username'@'localhost',2009.8025798797607,unreachable
+SHOW CREATE TABLE countries,1074.3939876556396,reachable
+SHOW VARIABLES,2016.0458087921143,unreachable
+SHOW STATUS,1036.7579460144043,reachable
+SHOW ERRORS,2013.7145519256592,unreachable
+SHOW WARNINGS,1067.216157913208,reachable
+START TRANSACTION,2012.7103328704834,unreachable
+SAVEPOINT svpt1,1054.3978214263916,reachable
+"INSERT INTO countries (name, population) VALUES ('TempCountry', 100)",2016.6149139404297,unreachable
+UPDATE countries SET population = 200 WHERE name = 'TempCountry',1056.3573837280273,reachable
+ROLLBACK TO svpt1,2019.4036960601807,unreachable
+COMMIT,1057.8076839447021,reachable
+USE sqli,2019.0472602844238,unreachable
+SET @test_variable = 'test_value',1036.7002487182617,reachable
+SELECT @test_variable,2018.2533264160156,unreachable
+EXPLAIN SELECT * FROM countries,1061.8643760681152,reachable
+LOCK TABLES countries READ,2007.749319076538,unreachable
+UNLOCK TABLES,1055.525779724121,reachable
+Accuracy,0.5
+Precision,0.0
+Recall,0.0
+F1 Score,0.0
+True Positive Rate (TPR),0.0
+False Positive Rate (FPR),1.0
