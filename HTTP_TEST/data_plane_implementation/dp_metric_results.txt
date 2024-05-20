@@ -1,0 +1,9 @@
+Accuracy: 0.98
+Precision: 1.00
+Recall: 0.97
+F1 Score: 0.98
+True Positive Rate (TPR): 1.00
+False Positive Rate (FPR): 0.03
+Minimum Delay: 4.69 ms
+Maximum Delay: 25.36 ms
+Average Delay: 9.81 ms
