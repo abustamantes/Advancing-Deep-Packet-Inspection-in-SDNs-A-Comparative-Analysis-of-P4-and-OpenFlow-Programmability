@@ -7,7 +7,7 @@ This thesis explores the efficacy of implementing Deep Packet Inspection (DPI) i
 ### Directory Structure
 
 - `/thesis/`
-  - `/code/` - Contains all source code for DPI implementations.
+  - `/HTTP_TEST/ - Contains flowcache files for HTTP-based Deep Packet Inspection testing.
     - `/data_plane/` - DPI implementation on the Data Plane.
     - `/control_plane/` - DPI implementation on the Control Plane.
   - `/utility_scripts/` - Scripts for setup, configuration, and testing.
@@ -53,3 +53,6 @@ This thesis explores the efficacy of implementing Deep Packet Inspection (DPI) i
   Data Plane-Centric DPI with P4 showed lower latency and resource usage, proving its effectiveness in high-speed network environments.
   ### Accuracy: 
   Data Plane-Centric DPI with P4 had the better threat accuracy detection than OpenFlow-based DPI and P4runtime-based DPI for our URL filtering and SQL command filtering applications.
+
+## Contact
+For any queries related to this research, please contact Anthony J. Bustamante at email: bustamantesuareza3@gmail.com.
