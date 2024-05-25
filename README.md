@@ -4,23 +4,21 @@
 
 This thesis explores the efficacy of implementing Deep Packet Inspection (DPI) in Software-Defined Networks (SDNs), comparing two approaches: Data Plane-based DPI and Control Plane-based DPI. The study focuses on evaluating the latency, accuracy, resource utilization, and scalability of these implementations to determine which approach offers the most effective solution for real-time network threat detection and mitigation.
 
-thesis/
-│
-├── code/               # Source code for DPI implementations
-│   ├── data_plane/     # DPI on the Data Plane
-│   ├── control_plane/  # DPI on the Control Plane
-│   └── utility_scripts/ # Setup, configuration, and testing scripts
-│
-├── documentation/      # Detailed docs and thesis report
-│   ├── thesis.pdf      # Compiled comprehensive thesis document
-│   └── figures/        # Charts and visualizations
-│
-├── tests/              # Testing frameworks and results
-│   ├── latency/        # Latency testing scripts
-│   ├── accuracy/       # Accuracy assessment tools
-│   └── resource_usage/ # Scripts for measuring CPU and memory usage
-│
-└── README.md           # Project overview and setup instructions
+### Directory Structure
+
+- `/thesis/`
+  - `/code/` - Contains all source code for DPI implementations.
+    - `/data_plane/` - DPI implementation on the Data Plane.
+    - `/control_plane/` - DPI implementation on the Control Plane.
+  - `/utility_scripts/` - Scripts for setup, configuration, and testing.
+  - `/documentation/` - Detailed documentation and the complete thesis report.
+  - `/thesis.pdf` - Compiled comprehensive thesis document.
+  - `/figures/` - Charts and visualizations of the experimental results.
+  - `/tests/` - Testing frameworks and results.
+    - `/latency/` - Scripts for latency testing.
+    - `/accuracy/` - Tools for assessing the accuracy of DPI implementations.
+    - `/resource_usage/` - Scripts for measuring CPU and memory usage.
+  - `README.md` - Overview and setup instructions for the project.
 
 ## Research Objectives
   ### Evaluate DPI Performance: 
