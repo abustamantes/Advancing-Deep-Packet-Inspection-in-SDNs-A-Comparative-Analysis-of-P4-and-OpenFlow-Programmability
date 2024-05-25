@@ -24,6 +24,9 @@ thesis/
 
 # Research Objectives
 
-    Evaluate DPI Performance: Assess and compare the performance of DPI implementations using OpenFlow and P4 in terms of latency, accuracy, and resource utilization.
-    Programmability and Flexibility: Analyze how P4 enhances DPI functionalities beyond the limitations of OpenFlow, particularly at the application layer.
-    Real-World Application: Simulate real-world network scenarios to test the efficacy of DPI strategies in detecting and managing network threats, particularly focusing on HTTP and SQL traffic.
+# Evaluate DPI Performance: 
+Assess and compare the performance of DPI implementations using OpenFlow and P4 in terms of latency, accuracy, and resource utilization.
+# Programmability and Flexibility: 
+Analyze how P4 enhances DPI functionalities beyond the limitations of OpenFlow, particularly at the application layer.
+# Real-World Application: 
+Simulate real-world network scenarios to test the efficacy of DPI strategies in detecting and managing network threats, particularly focusing on HTTP and SQL traffic.
