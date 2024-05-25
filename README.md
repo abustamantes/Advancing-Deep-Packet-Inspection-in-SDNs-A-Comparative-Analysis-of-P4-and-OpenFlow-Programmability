@@ -7,18 +7,17 @@ This thesis explores the efficacy of implementing Deep Packet Inspection (DPI) i
 ### Directory Structure
 
 - `/thesis/`
-  - `/HTTP_TEST/ - Contains flowcache files for HTTP-based Deep Packet Inspection testing.
+  - `/HTTP_TEST/` - Contains flowcache files for HTTP-based Deep Packet Inspection testing.
     - `/data_plane/` - DPI implementation on the Data Plane.
     - `/control_plane/` - DPI implementation on the Control Plane.
-  - `/utility_scripts/` - Scripts for setup, configuration, and testing.
-  - `/documentation/` - Detailed documentation and the complete thesis report.
-  - `/thesis.pdf` - Compiled comprehensive thesis document.
-  - `/figures/` - Charts and visualizations of the experimental results.
-  - `/tests/` - Testing frameworks and results.
-    - `/latency/` - Scripts for latency testing.
-    - `/accuracy/` - Tools for assessing the accuracy of DPI implementations.
-    - `/resource_usage/` - Scripts for measuring CPU and memory usage.
-  - `README.md` - Overview and setup instructions for the project.
+  - `/POX_Applications/` - Contains POX controller applications.
+  - `/SQL_TEST/` - Contains flowcache files for SQL-based Deep Packet Inspection testing.
+  - `/pox/` - Contains POX controller scripts.
+  - `/Manual_to_use_testing_framework.pdf` - Manual with guidelines on how to use the testing framework.
+  - `/OVF P4 vs Openflow.ovf` - OVF file for setting up the virtualized environment.
+  - `/OVF P4 vs Openflow.zip` - Compressed file containing the OVF setup.
+  - `/README.md` - Overview and setup instructions for the project.
+  - `/database_schema.sql` - SQL schema files for database setup.
 
 ## Research Objectives
   ### Evaluate DPI Performance: 
