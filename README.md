@@ -45,7 +45,7 @@ This thesis explores the efficacy of implementing Deep Packet Inspection (DPI) i
   ### Data Plane-Centric DPI Strategy: 
   Developed a novel approach by embedding DPI functionalities directly into the data plane using P4, thereby reducing dependency on the control plane.
 
-## Key Findings
+## Key Findings:
 
   ### Performance: 
   P4 implementations generally outperformed OpenFlow in terms of processing speed and flexibility.
