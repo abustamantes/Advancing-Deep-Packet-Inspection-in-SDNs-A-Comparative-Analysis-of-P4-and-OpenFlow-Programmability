@@ -39,7 +39,7 @@ This thesis explores the efficacy of implementing Deep Packet Inspection (DPI) i
 ## Implementation Details
 
   ### OpenFlow-based DPI: 
-  Implemented using POX controller to manage Open vSwitch, focusing on layer 4 (transport layer) traffic inspection.
+  Implemented using POX controller to manage Open vSwitch, focusing on data inspection on L7 protocols.
   ### P4runtime-based DPI: 
   Utilized the P4 language to program BMv2 switches, enabling deeper packet inspection at the application layer.
   ### Data Plane-Centric DPI Strategy: 
@@ -50,6 +50,6 @@ This thesis explores the efficacy of implementing Deep Packet Inspection (DPI) i
   ### Performance: 
   P4 implementations generally outperformed OpenFlow in terms of processing speed and flexibility.
   ### Resource Utilization: 
-  Data Plane-Centric DPI showed lower latency and resource usage, proving its effectiveness in high-speed network environments.
-  ### Scalability: 
-  The P4runtime-based approach demonstrated greater scalability, handling larger data volumes without significant degradation in performance.
+  Data Plane-Centric DPI with P4 showed lower latency and resource usage, proving its effectiveness in high-speed network environments.
+  ### Accuracy: 
+  Data Plane-Centric DPI with P4 had the better threat accuracy detection than OpenFlow-based DPI and P4runtime-based DPI for our URL filtering and SQL command filtering applications.
