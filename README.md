@@ -14,6 +14,7 @@ This thesis explores the efficacy of implementing Deep Packet Inspection (DPI) i
   - `/SQL_TEST/` - Contains flowcache files for SQL-based Deep Packet Inspection testing.
   - `/pox/` - Contains POX controller scripts.
   - `/Manual_to_use_testing_framework.pdf` - Manual with guidelines on how to use the testing framework.
+  - `/Tests and Results.pdf` - Tests and results for the research project. It describes in detail the type of tests, and interpretation of the results.
   - `/OVF P4 vs Openflow.ovf` - OVF file for setting up the virtualized environment.
   - `/OVF P4 vs Openflow.zip` - Compressed file containing the OVF setup.
   - `/README.md` - Overview and setup instructions for the project.
